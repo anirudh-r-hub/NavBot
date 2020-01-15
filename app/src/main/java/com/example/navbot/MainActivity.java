@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
                     switch(menuItem.getItemId())
                     {
                         case R.id.nav_home:
-                            selectedFragment=new home_fragment();
+                            //selectedFragment=new home_fragment();
+                            selectedFragment = new Main2Activity();
                             break;
                         case R.id.nav_profile:
                             selectedFragment=new profile_fragment();
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav=findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new home_fragment())
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Main2Activity())
                 .commit();
     }
 }
